@@ -3,7 +3,7 @@
 
 <head>
   <title>
-  Página Externa: Wiki Hugo Coder · jahred liddie
+  Emoji Support · jahred liddie
 </title>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,30 +13,38 @@
 
 
 <meta name="author" content="Jahred Liddie">
-<meta name="description" content="Jahred Liddie&#39;s personal website">
+<meta name="description" content="Guide to emoji usage in Hugo">
 <meta name="keywords" content="environment,research,science,personal,R,water">
 
 
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Página Externa: Wiki Hugo Coder">
-  <meta name="twitter:description" content="Jahred Liddie&#39;s personal website">
+  <meta name="twitter:title" content="Emoji Support">
+  <meta name="twitter:description" content="Guide to emoji usage in Hugo">
 
-<meta property="og:url" content="https://jahredwithanh.github.io/posts/hugo-coder-wiki/">
+<meta property="og:url" content="https://jahredwithanh.github.io/posts/emoji-support/">
   <meta property="og:site_name" content="jahred liddie">
-  <meta property="og:title" content="Página Externa: Wiki Hugo Coder">
-  <meta property="og:description" content="Jahred Liddie&#39;s personal website">
+  <meta property="og:title" content="Emoji Support">
+  <meta property="og:description" content="Guide to emoji usage in Hugo">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2023-07-06T00:00:00+00:00">
-    <meta property="article:modified_time" content="2023-07-06T00:00:00+00:00">
+    <meta property="article:published_time" content="2023-07-07T00:00:00+00:00">
+    <meta property="article:modified_time" content="2023-07-07T00:00:00+00:00">
     <meta property="article:tag" content="Hugo">
+    <meta property="article:tag" content="Markdown">
+    <meta property="article:tag" content="Emoji">
+      <meta property="og:see_also" content="https://jahredwithanh.github.io/posts/markdown-syntax/">
+      <meta property="og:see_also" content="https://jahredwithanh.github.io/posts/rich-content/">
+      <meta property="og:see_also" content="https://jahredwithanh.github.io/posts/more-rich-content/">
+      <meta property="og:see_also" content="https://jahredwithanh.github.io/posts/math-typesetting/">
+      <meta property="og:see_also" content="https://jahredwithanh.github.io/posts/html-and-css-only-tabs/">
+      <meta property="og:see_also" content="https://jahredwithanh.github.io/posts/mermaid-support/">
 
 
 
 
-<link rel="canonical" href="https://jahredwithanh.github.io/posts/hugo-coder-wiki/">
+<link rel="canonical" href="https://jahredwithanh.github.io/posts/emoji-support/">
 
 
 <link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -159,8 +167,8 @@
       <header>
         <div class="post-title">
           <h1 class="title">
-            <a class="title-link" href="https://jahredwithanh.github.io/posts/hugo-coder-wiki/">
-              Página Externa: Wiki Hugo Coder
+            <a class="title-link" href="https://jahredwithanh.github.io/posts/emoji-support/">
+              Emoji Support
             </a>
           </h1>
         </div>
@@ -168,24 +176,37 @@
           <div class="date">
             <span class="posted-on">
               <i class="fa-solid fa-calendar" aria-hidden="true"></i>
-              <time datetime="2023-07-06T00:00:00Z">
-                July 6, 2023
+              <time datetime="2023-07-07T00:00:00Z">
+                July 7, 2023
               </time>
             </span>
             <span class="reading-time">
               <i class="fa-solid fa-clock" aria-hidden="true"></i>
-              0-minute read
+              One-minute read
             </span>
           </div>
           <div class="authors">
   <i class="fa-solid fa-user" aria-hidden="true"></i>
-    <a href="/authors/programador-solit%C3%A1rio/">Programador Solitário</a></div>
+    <a href="/authors/lone-coder/">Lone Coder</a></div>
 
-          
+          <div class="categories">
+  <i class="fa-solid fa-folder" aria-hidden="true"></i>
+    <a href="/categories/syntax/">Syntax</a>
+      <span class="separator">•</span>
+    <a href="/categories/theme-demo/">Theme Demo</a></div>
+
           <div class="tags">
   <i class="fa-solid fa-tag" aria-hidden="true"></i>
     <span class="tag">
       <a href="/tags/hugo/">Hugo</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/markdown/">Markdown</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/emoji/">Emoji</a>
     </span></div>
 
         </div>
@@ -193,12 +214,30 @@
 
       <div class="post-content">
         
-        
+        <p>Emoji can be enabled in a Hugo project in a number of ways.</p>
+<p>The <a href="https://gohugo.io/functions/emojify/"  class="external-link" target="_blank" rel="noopener"><code>emojify</code></a> function can be called directly in templates or <a href="https://gohugo.io/templates/shortcode-templates/#inline-shortcodes"  class="external-link" target="_blank" rel="noopener">Inline Shortcodes</a>.</p>
+<p>To enable emoji globally, set <code>enableEmoji</code> to <code>true</code> in your site&rsquo;s <a href="https://gohugo.io/getting-started/configuration/"  class="external-link" target="_blank" rel="noopener">configuration</a> and then you can type emoji shorthand codes directly in content files; e.g.</p>
+<p><span class="nowrap"><span class="emojify">🙈</span> <code>:see_no_evil:</code></span>  <span class="nowrap"><span class="emojify">🙉</span> <code>:hear_no_evil:</code></span>  <span class="nowrap"><span class="emojify">🙊</span> <code>:speak_no_evil:</code></span></p>
+<br>
+<p>The <a href="http://www.emoji-cheat-sheet.com/"  class="external-link" target="_blank" rel="noopener">Emoji cheat sheet</a> is a useful reference for emoji shorthand codes.</p>
+<hr>
+<p><strong>N.B.</strong> The above steps enable Unicode Standard emoji characters and sequences in Hugo, however the rendering of these glyphs depends on the browser and the platform. To style the emoji you can either use a third party emoji font or a font stack; e.g.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">.emoji {
+</span></span><span class="line"><span class="cl">font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;
+</span></span><span class="line"><span class="cl">}</span></span></code></pre></div>
       </div>
 
 
       <footer>
         
+
+<section class="see-also">
+  
+    
+    
+    
+  
+</section>
 
 
         
